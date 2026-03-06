@@ -1,10 +1,9 @@
 workflows: 
   gitlab_patched_build:
     name: GitLab PAT Build
-    # NO environment.vars - let curl provide directly!
     environment:
-      groups:
-        - GitLabToken
+      #groups:
+      #  - GitLabToken
       vars:
         GITLABPAT: $GITLABPAT # This variable will be set by the API trigger
         REPO_URL: "https://oauth2:$GITLABPAT@gitlab.com/ivan-group3770550/ivan-project.git"
